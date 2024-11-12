@@ -1,6 +1,6 @@
 import arrays
 import random
-from time import perf_counter
+import time
 
 # Phase 1: Data Generation and Initial sorting using insertion sort
 
@@ -146,14 +146,14 @@ def search_perf_compare(sorted_array, target):
     sorted_array: array(list)
     target: int
     '''
-    linear_start = perf_counter()
+    linear_start = time.perf_counter()
     linear_search(sorted_array, target)
-    linear_end = perf_counter()
+    linear_end = time.perf_counter()
     linear_time = linear_end - linear_start  # difference in time before and after linear search
 
-    binary_start = perf_counter()
+    binary_start = time.perf_counter()
     binary_search(sorted_array, target)
-    binary_end = perf_counter()
+    binary_end = time.perf_counter()
     binary_time = binary_end - binary_start  # difference in time before and after binary search
 
 
